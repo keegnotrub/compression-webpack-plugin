@@ -229,7 +229,7 @@ class CompressionPlugin {
               originalAlgorithm: this.options.algorithm,
               compressionOptions: this.options.compressionOptions,
               name,
-              contentHash: crypto.createHash("md4").update(input).digest("hex"),
+              contentHash: crypto.createHash("md5").update(input).digest("hex"),
             };
           } else {
             cacheData.name = serialize({
